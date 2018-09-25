@@ -5,7 +5,7 @@ from pyspark.sql.functions import col
 
 
 def data_preparation(path):
-
+#TODO split into logic functions
     spark = SparkSession \
         .builder \
         .master('local[*]') \
