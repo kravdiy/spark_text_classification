@@ -6,10 +6,10 @@ import argparse
 import logging
 
 log = logging.getLogger(__name__)
-print("This is the name of the script: ", sys.argv[0])
-print("Number of arguments: ", len(sys.argv))
-print("The arguments are: ", str(sys.argv))
-print('version is', sys.version)
+log.info("This is the name of the script: ", sys.argv[0])
+log.info("Number of arguments: ", len(sys.argv))
+log.info("The arguments are: ", str(sys.argv))
+log.info('version is', sys.version)
 
 parser = argparse.ArgumentParser()
 parser.add_argument("x", type=str, help="the input file")
@@ -28,7 +28,7 @@ def main():
 
 
 end_time = monotonic()
-print(end_time - start_time)
+log.info(end_time - start_time)
 
 
 if __name__ == "__main__":
