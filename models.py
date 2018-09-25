@@ -2,7 +2,7 @@ from config import LDA_CLUSTERS
 from pyspark.ml.clustering import LDA
 from pyspark.ml.clustering import BisectingKMeans
 from utils import show_lda_weights
-
+import logging
 
 def lda_model(data):
 
