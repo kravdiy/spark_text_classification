@@ -15,7 +15,7 @@ def lda_model(data):
 
     model = lda.fit(data)
     topics = model.describeTopics(maxTermsPerTopic=15)
-    print("Learned topics (as distributions over vocab of " + str(model.vocabSize())
+    log.info("Learned topics (as distributions over vocab of " + str(model.vocabSize())
           + " words):")
     wordNumbers = 10
     topicIndices = model.describeTopics(maxTermsPerTopic=wordNumbers)
@@ -29,8 +29,8 @@ def bisect_model(data):
     bkm = BisectingKMeans().setK(2).setSeed(1)
     model = bkm.fit(data)
     cost = model.computeCost(data)
-    print("Within Set Sum of Squared Errors = " + str(cost))
-    print("Cluster Centers: ")
+    prilog.infont("Within Set Sum of Squared Errors = " + str(cost))
+    log.info("Cluster Centers: ")
     centers = model.clusterCenters()
     for center in centers:
         print(center)
