@@ -33,7 +33,7 @@ def bisect_model(data):
     log.info("Cluster Centers: ")
     centers = model.clusterCenters()
     for center in centers:
-        print(center)
+        log.info(center)
     predictions_bi = model.transform(data)
 
     return predictions_bi
